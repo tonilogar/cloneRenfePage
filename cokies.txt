@@ -1,0 +1,29 @@
+
+-webkit-tap-highlight-color: transparent;
+letter-spacing: 0;
+font: 14px/1.5 Helvetica,Arial,sans-serif;
+text-align: center;
+visibility: visible;
+box-sizing: border-box;
+font-weight: 500;
+line-height: 1.1;
+color: inherit;
+margin-top: 20px;
+margin-bottom: 10px;
+font-family: opensans700, Arial, sans-serif;
+font-size: 1.8rem;
+text-transform: uppercase;
+padding: 0px 0px 0px;
+    
+Información sobre las Cookies
+
+-webkit-tap-highlight-color: transparent;
+letter-spacing: 0;
+color: #FFF;
+font: 14px/1.5 Helvetica,Arial,sans-serif;
+text-align: center;
+visibility: visible;
+box-sizing: border-box;
+margin: 0 0 10px;
+
+En Renfe utilizamos cookies propias y de terceros para mejorar nuestros servicios, obtener estadísticas, mostrarte publicidad relacionada con sus preferencias mediante el análisis de hábitos de navegación y facilitar su interacción con redes sociales. Si continúa navegando consiente nuestro uso de cookies. Puede cambiar la configuración u obtener más información en nuestra
