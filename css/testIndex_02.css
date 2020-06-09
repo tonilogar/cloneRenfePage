@@ -1,0 +1,135 @@
+@font-face {
+    font-family: "OpenSans-ExtraBold_700";
+    src: local("fonts/openSans_700/OpenSans-ExtraBold.ttf");
+    }
+html {
+    font-size: 62.5%;
+}
+body {
+    background-color: #f3f3f3;
+}
+*{
+    font-family: 'OpenSans-ExtraBold_700', 'Arial', 'sans-serif';  
+}
+main {
+    /* display: grid;
+    grid-template-columns: 1fr; */
+}
+label {
+    cursor: pointer;
+}
+/* header--------------------------------------------------- */
+header {
+    background-color: #8A0072;
+    display: grid;
+    /* grid-template-columns: 1fr fr 1fr; */
+    grid-template-areas: 'menuLeft logoGob logoRenfe    menuRigth'
+                         'line     line    line         line '
+                         '.        .       h1           h1'
+                         'worldMenu worldMenu worldMenu worldMenu'
+    ;
+    align-items: center;
+    align-self: center;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+}
+header img {
+    width: 3em;
+}
+.header__menuCanvasWindow {
+    grid-area: menuLeft;
+    z-index: 100;
+    align-self: center;
+    justify-self: start;
+    padding-left: 1em;
+}
+.header--logoGob {
+    grid-area: logoGob;
+    width: 10em; 
+    align-self: center;
+    justify-self: center;
+    padding-top: 1em;
+}
+.header--logoRenfe {
+    grid-area: logoRenfe;
+    width: 10em; 
+    align-self: center;
+    justify-self: center;
+    padding-top: 1em;
+}
+.header__worldCanvasWindow {
+    grid-area: menuRigth;
+    align-self: center;
+    justify-self: end; 
+    padding-right: 1em;  
+}
+.header--line {
+    grid-area: line; 
+    background-color: rgb(190, 0, 159);
+    height: 1px;
+    width: 100%;
+}
+h1 {
+    grid-area: h1; 
+    align-self: center;
+    justify-self: end; 
+    font-size: 3em;
+}
+h1 a{
+    text-decoration: underline;
+    color: white;
+}
+.header__ImageUserContainer, .header--Bienvenido, .header__worldNav, input{
+    display: none;
+}
+
+/* Properties of rigth menu */
+.header__menuNav {
+    /* z-index: 200; */
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    top: 70px;
+    left: -50%;
+    background:rgba(255, 255, 255, 0.9);
+    width: 50%;
+    height: 100vh; 
+    padding-top: 4em;
+    transition: all .5s;
+}
+/* Properties of rigth world menu */
+.header__worldNav {
+    grid-area: worldMenu; 
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    background:rgba(255, 255, 255, 0.9);
+    width: 100%;
+    padding-top: 4em;
+    transition: all .5s;
+}
+/* When checked de image open and close de menu */
+#openOffCanvas:checked ~ .header__menuNav {
+    left: 8px;
+    /* display: block; */
+  }
+/* When checked de image open and close de menu */
+  #openOffCanvasWorld:checked ~ .header__worldNav {
+    
+    display: block;
+  }
+
+
+/* header--------------------------------------------------- */
+
+
+
+@media screen and (min-width: 480px){
+    /* nav:before {
+        display: block;
+        font-family: 'OpenSans-ExtraBold_700';
+    } */
+    nav {
+        font-family: 'OpenSans-ExtraBold_700';
+    }
+}

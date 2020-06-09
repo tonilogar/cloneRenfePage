@@ -1,0 +1,17 @@
+
+header {
+    width: 100%;
+    height: 200px;
+    background-color: #8A0072;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    font-size: 20px;
+}
+p  {
+    font-size: 5vw/2;
+}
+
+img {
+    width: 100px;
+}

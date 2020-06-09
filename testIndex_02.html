@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=si'>
+    <!-- <meta name='viewport' content='width=device-width, initial-scale=1.0'> -->
+    <title>Document</title>
+    <link rel='stylesheet' href='css/cssReset.css'>
+    <link rel='stylesheet' href='css/testIndex_02.css'>
+    <script src='https://code.jquery.com/jquery-1.12.4.js'></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+  </head>
+<body>
+    <main>
+        <header>
+            <input type='checkbox' id='openOffCanvas'>
+            <!-- Hay que meter el label en un div para reducir el display del label a una caja..si no el label abarca todo el espacio horizontal -->
+            <div class='header__menuCanvasWindow'>
+                <label for='openOffCanvas'>
+                    <picture>
+                        <img src='images/menu.svg' alt='menu'>
+                    </picture>
+                </label>
+            </div>
+            <nav class='header__menuNav'>
+                <ul>
+                    <li><a href='https://www.renfe.com/empresa/index.html'>Grupo Renfe</a></li>
+                    <li><a href='https://www.renfe.com/empresa/alquilerdematerial/index.html'>Alquiler</a></li>														
+                    <li><a href='https://www.renfe.com/empresa/integria/index.html'>Fabricación y Mantenimiento</a></li>
+                    <li><a href='https://www.renfe.com/empresa/mercancias/index.html'>Mercancías</a></li>									
+                    <li><a href='https://www.renfe.com/viajeros/index.html'>Viajeros</a></li>
+                </ul>
+            </nav>
+            <picture>
+                <img class='header--logoGob' src='images/logo_gob.jpg' alt='Logo gobierno de España'>
+            </picture>
+            <picture>
+                <img class='header--logoRenfe' src='images/logo.png' alt='Logo renfe'>
+            </picture>
+            <input type='checkbox' id='openOffCanvasWorld'>
+            <div class='header__worldCanvasWindow'>
+                <label for='openOffCanvasWorld'>
+                    <picture>
+                        <img src='images/world.svg' alt='menu'>
+                    </picture>
+                </label>
+            </div>             
+           <nav class='header__worldNav'>
+               <ul>
+                   <li><a href='https://www.renfe.com/'>Bienvenido</a></li>
+                   <li><a href='https://www.renfe.com/CA/viajeros/index.html'>Benvingut (C)</a></li>
+                   <li><a href='https://www.renfe.com/EU/viajeros/index.html'>Ongi etorri</a></li>
+                   <li><a href='https://www.renfe.com/GA/viajeros/index.html'>Benvido</a></li>
+                   <li><a href='https://www.renfe.com/VA/viajeros/index.html'>Benvingut (V)</a></li>
+                </ul>
+           </nav> 
+           <p class='header--line'>
+            <hr>
+           <p>
+           <picture class='header__ImageUserContainer'>
+               <img class='header__ImageUser' src='images/user.svg' alt='menu'>
+            </picture> 
+            <p class="header--Bienvenido">Bienvenido</p>
+            <h1><a href='https://venta.renfe.com/vol/loginCEX.do'>Clientes renfe identificate.</a></h1> 
+       </header>
+   </main>
+</body>
+</html>

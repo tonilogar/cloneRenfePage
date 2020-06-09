@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/testIndex.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
@@ -57,8 +57,8 @@
           <input type="text" id="destiny" required> 
         </div>
         <!-- blockOriginDestiny -->
-        <!-- blockDataTrip -->
-        <div class= "blockDataTrip">
+         <!-- blockDataTrip -->
+         <div class= "blockDataTrip">
           <div class="blockDataTrip__title">
             <span><strong> FECHA DE VIAJE</strong></span>
             <span><strong> HORARIOS</strong></span>
@@ -392,9 +392,9 @@
           <li class="border-r"><a href="https://www.renfe.com/empresa/informacion_legal/privacidad.html">Política Privacidad de Datos</a></li>        
           <li class="border-r"><a href="https://www.renfe.com/empresa/informacion_legal/politica_cookies.html">Política de cookies</a></li>
           <li class="border-r"><a href="https://www.renfe.com/empresa/informacion_legal/accesibilidad_web.html">Accesibilidad</a></li>
-          <li><a href="https://www.renfe.com/mapa.html">Mapa web</a></li>
-          <p>@Renfe. Todos los derechos reservados.</p>               
+          <li><a href="https://www.renfe.com/mapa.html">Mapa web</a></li>                        
         </ul>
+        <p>@Renfe. Todos los derechos reservados.</p> 
       </div>
       <!--  footer -->
     </div><!-- main -->
@@ -407,26 +407,38 @@
         var today = now.getFullYear()+"-"+(month)+"-"+(day) ;
         $("#dataDeparture").val(today);
     });
-    
+      /* $(window).load(function() {
+          setInterval(function(){
+            nextImage();
+            console.log("setInterval");
+          }
+          ,6000);
+      }); */
+      var animation=setInterval(nextImage, 6000);
+
       function nextImage() {
         var elementClass = document.getElementById("blockAnimationImages__container");
         var positionClass = elementClass.getBoundingClientRect();
         var left=positionClass.left;
         console.log(left + "left")
+        clearInterval(animation);
         if(left == 0 || left > -480)
         {
           document.getElementById("blockAnimationImages__container").style.transform = "translateX(-480px)"; 
           console.log(left + "left into")
+          /* clearInterval(animation); */
         }
         else if (left == -480 || left > -960)
         {
           document.getElementById("blockAnimationImages__container").style.transform = "translateX(-960px)"; 
           console.log(left + "left into")
+          /* clearInterval(animation); */
         }
         else if (left == -960 || left > -1440)
         {
           document.getElementById("blockAnimationImages__container").style.transform = "translateX(0px)"; 
           console.log(left + "left into")
+          /* clearInterval(animation); */
         }  
         
         console.log(
