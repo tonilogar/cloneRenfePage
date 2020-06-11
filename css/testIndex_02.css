@@ -24,10 +24,8 @@ header {
     display: grid;
     /* grid-template-columns: 1fr fr 1fr; */
     grid-template-areas: 'menuLeft logoGob logoRenfe    menuRigth'
-                         'line     line    line         line '
                          '.        .       h1           h1'
-                         'worldMenu worldMenu worldMenu worldMenu'
-    ;
+                         'worldMenu worldMenu worldMenu worldMenu';
     align-items: center;
     align-self: center;
     /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
@@ -62,12 +60,12 @@ header img {
     justify-self: end; 
     padding-right: 1em;  
 }
-.header--line {
+/* .header--line {
     grid-area: line; 
     background-color: rgb(190, 0, 159);
     height: 1px;
     width: 100%;
-}
+} */
 h1 {
     grid-area: h1; 
     align-self: center;
@@ -78,7 +76,7 @@ h1 a{
     text-decoration: underline;
     color: white;
 }
-.header__ImageUserContainer, .header--Bienvenido, .header__worldNav, input{
+.header__ImageUserContainer, .header--Bienvenido, .header__worldNav, input, .header__screem{
     display: none;
 }
 
@@ -89,12 +87,12 @@ h1 a{
     margin: 0px;
     padding: 0px;
     position: fixed;
-    top: 70px;
-    left: -50%;
+    top: 83px;
+    left: -100%;
     background:rgba(255, 255, 255, 0.9);
-    width: 50%;
+    width: 100%;
     height: 100vh; 
-    padding-top: 4em;
+    padding-top: 2em;
     transition: all .5s;
 }
 /* Properties of rigth world menu */
@@ -105,31 +103,52 @@ h1 a{
     padding: 0px;
     background:rgba(255, 255, 255, 0.9);
     width: 100%;
-    padding-top: 4em;
+    padding-top: 2em;
     transition: all .5s;
 }
 /* When checked de image open and close de menu */
 #openOffCanvas:checked ~ .header__menuNav {
-    left: 8px;
-    /* display: block; */
+    left: 0px;
   }
 /* When checked de image open and close de menu */
-  #openOffCanvasWorld:checked ~ .header__worldNav {
-    
+#openOffCanvasWorld:checked ~ .header__worldNav {
     display: block;
   }
-
-
+.header__screem {
+    background-color: white;
+    width: 200px;
+    height: 200px;
+}
+header li {
+    font-size: 2em;
+    margin: 10px;
+    padding: 10px;
+    border: 8px;
+    border-bottom: 1px solid  #a8a7a7;
+}
+header li a {
+    color: #8A0072;
+}
 /* header--------------------------------------------------- */
+.block {
+    width: 100%;
+    height: 200px;
+    background-color: blue;
+}
 
 
-
-@media screen and (min-width: 480px){
-    /* nav:before {
-        display: block;
-        font-family: 'OpenSans-ExtraBold_700';
-    } */
-    nav {
-        font-family: 'OpenSans-ExtraBold_700';
+@media screen and (min-width: 1023px){
+    header {
+        background-color: #8A0072;
+        display: grid;
+        /* grid-template-columns: 1fr fr 1fr; */
+        grid-template-areas: 'menuLeft logoGob logoRenfe    menuRigth'
+                             'line     line    line         line '
+                             '.        .       line           line'
+                             '.        .       line           line'
+        ;
+        align-items: center;
+        align-self: center;
+        /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
     }
 }
