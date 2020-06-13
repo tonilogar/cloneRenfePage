@@ -20,12 +20,14 @@ label {
 }
 /* header--------------------------------------------------- */
 header {
+   /*  min-width: 480px; */
+   height: 100px;
     background-color: #8A0072;
     display: grid;
-    /* grid-template-columns: 1fr fr 1fr; */
+    /* grid-template: 52px 1fr 1fr 1fr 1fr 1fr 20px 40px / 52px 1fr 1fr 1fr 52px ; */
     grid-template-areas: 'menuLeft logoGob logoRenfe    menuRigth'
                          '.        .       h1           h1'
-                         'worldMenu worldMenu worldMenu worldMenu';
+                         'worldNav worldNav worldNav worldNav';
     align-items: center;
     align-self: center;
     /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
@@ -60,12 +62,6 @@ header img {
     justify-self: end; 
     padding-right: 1em;  
 }
-/* .header--line {
-    grid-area: line; 
-    background-color: rgb(190, 0, 159);
-    height: 1px;
-    width: 100%;
-} */
 h1 {
     grid-area: h1; 
     align-self: center;
@@ -76,13 +72,22 @@ h1 a{
     text-decoration: underline;
     color: white;
 }
-.header__ImageUserContainer, .header--Bienvenido, .header__worldNav, input, .header__screem{
+h2 {
+    grid-area: h2; 
+    align-self: center;
+    justify-self: end; 
+    font-size: 3em;
+}
+h2 a{
+    text-decoration: underline;
+    color: white;
+}
+.header__ImageUserContainer, .header__menuNav_02, h2, .header__worldNav, input, .header__screem{
     display: none;
 }
 
 /* Properties of rigth menu */
 .header__menuNav {
-    /* z-index: 200; */
     list-style: none;
     margin: 0px;
     padding: 0px;
@@ -97,7 +102,7 @@ h1 a{
 }
 /* Properties of rigth world menu */
 .header__worldNav {
-    grid-area: worldMenu; 
+    grid-area: worldNav;  
     list-style: none;
     margin: 0px;
     padding: 0px;
@@ -114,11 +119,7 @@ h1 a{
 #openOffCanvasWorld:checked ~ .header__worldNav {
     display: block;
   }
-.header__screem {
-    background-color: white;
-    width: 200px;
-    height: 200px;
-}
+
 header li {
     font-size: 2em;
     margin: 10px;
@@ -141,14 +142,105 @@ header li a {
     header {
         background-color: #8A0072;
         display: grid;
-        /* grid-template-columns: 1fr fr 1fr; */
-        grid-template-areas: 'menuLeft logoGob logoRenfe    menuRigth'
-                             'line     line    line         line '
-                             '.        .       line           line'
-                             '.        .       line           line'
-        ;
+        grid-template: 2px 50px 50px/ 150px 150px 60px 400px 40px 500px ;
+        grid-template-areas: '.        .          .        .          .           .  '
+                             'logoGob  logoRenfe  screem   worldNav    imageUser   h2 '
+                             'logoGob  logoRenfe  screem    menuNav2  .            h1 ';
         align-items: center;
         align-self: center;
-        /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+    }
+    .header--logoGob {
+        margin-top: 100px;
+    }
+    .header--logoRenfe {
+        margin-top: 100px;
+    }
+    .header__ImageUserContainer {
+        grid-area: imageUser; 
+        display: block;
+        opacity: 0.6;
+        margin-top: 20px;
+        justify-self: start; 
+    }
+    
+    h1 a {
+        color:  #8A0072;
+        font-size: .5em;
+        justify-self: start;  
+    }
+    h1 {
+        z-index: 100;
+        justify-self: start;
+        margin-bottom: 55px; 
+    }
+    h2 a { 
+        color:  #838383;
+        font-size: .5em;   
+    }
+    h2 {
+        display: block;
+        z-index: 100;  
+        justify-self: start;  
+    }
+    .header__worldNav, .header__menuNav_02{
+        display: block;
+    }
+    .header__menuCanvasWindow, .header__worldCanvasWindow {
+        display: none;
+    }
+    .header__menuNav_02 {
+        grid-area: menuNav2; 
+        list-style: none;
+        margin-right: 0px;
+        padding-right: 0px;
+        z-index: 200;
+        display: inline;
+    }
+   
+    /* Properties of rigth world menu */
+    .header__worldNav {
+        grid-area: worldNav;
+        position: relative;
+        list-style: none; 
+        display: inline; 
+    }
+    .header__screem {
+        display: block;
+        grid-area: screem;
+        width: 9000%;
+        height: 96%;
+        background-color: white;
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+    }
+    .header__screem img {
+        width: 50px;
+        height: 100%;
+    }
+    
+    .header__worldNav li {
+        font-size: 2em;
+        margin: 0px;
+        padding: 0px;
+        border-right: 1px solid  #a8a7a7;
+        display: inline;
+    }
+    .header__worldNav li a {
+        /* color: #8A0072; */
+        color: #208a00;
+        font-size: .5em;
+    }
+    .header__menuNav_02 li {
+        font-size: 2em;
+        margin: 0px;
+        padding: 0px;
+        border-right: 1px solid  #a8a7a7;
+        display: inline;
+    }
+    .header__menuNav_02 li a {
+        /* color: #8A0072; */
+        color: #208a00;
+        font-size: .5em;
     }
 }
