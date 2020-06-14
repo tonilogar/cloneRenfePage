@@ -1,450 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=si'>
+    <!-- <meta name='viewport' content='width=device-width, initial-scale=1.0'> -->
     <title>Document</title>
-    <link rel="stylesheet" href="css/index.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='css/cssReset.css'>
+    <link rel='stylesheet' href='css/index.css'>
+    <script src='https://code.jquery.com/jquery-1.12.4.js'></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
   </head>
 <body>
-    <div class="main">
-      <!--  blockHeader -->
-      <header class="blockHeader">
-        <div class="blockHeader__menuLanguage">
-          <figure>
-            <img class="blockHeader--menu" src="media_480/images/menu.png" alt="menu" />
-          </figure> 
-          <figure>
-            <img class="blockHeader--logGob" src="media_480/images/logoGob.jpg" alt="logo_gobierno_España" />
-          </figure> 
-          <figure>
-            <img class="blockHeader--logRenfe" src="media_480/images/logoRenfe.png" alt="logo_renfe" />
-          </figure>
-          <figure>
-            <img class="blockHeader--globo" src="media_480/images/globo.png" alt="idiomas" />
-          </figure>
-        </div>  
-          <div class="blockHeader__line">
-            <div class="line"></div>
-          </div>
-          <div class="blockHeader__linkUser"> 
-            <a href="/"><span><strong> CLIENTES RENFE. IDENTIFÍCATE.</strong></span></a>
-          </div>
-      </header>
-      <!--  blockHeader -->
-      <!-- blockTrips -->
-      <div class= "blockTrips">
-        <figure>
-          <img src="media_480/images/viajesRenfe.png" alt="Renfe viajes" />
-        </figure> 
-          <div class="blockTrips__buttons">
-              <button class="blockTrips--buttonCoches"><strong>COCHES</strong></button>
-              <button class="blockTrips--buttonHoteles"><strong>HOTELES</strong></button>
-              <button class="blockTrips--buttonTrenHotel"><strong>TREN + HOTEL</strong></button>
-              <button class="blockTrips--buttonTrenOcio"><strong>TREN + OCIO</strong></button>
-          </div>
-          </div>
-    
-      <!-- blockTrips -->
-      <!-- blockOriginDestiny --> 
-      <form class= "form" action="#" target="" method="get" name="formDatosPersonales">  
-        <div class= "blockOriginDestiny" action="#" target="" method="get" name="formDatosPersonales">
-          <label for="origin"><strong>ORIGEN</strong></label>
-          <input type="text" id="origin" required>
-          <label for="destiny"><strong>DESTINO</strong></label>
-          <input type="text" id="destiny" required> 
-        </div>
-        <!-- blockOriginDestiny -->
-        <!-- blockDataTrip -->
-        <div class= "blockDataTrip">
-          <div class="blockDataTrip__title">
-            <span><strong> FECHA DE VIAJE</strong></span>
-            <span><strong> HORARIOS</strong></span>
-          </div>
-          <div class="blockDataTrip__departure">
-            <label  for="userName"><strong>SALIDA</strong></label>
-              <button><img src="media_480/images/mañana.png" alt="menu" />
-              MAÑANA</button>
-              <button><img src="media_480/images/tarde.png" alt="menu" />
-              TARDE</button>
-              <button><img src="media_480/images/noche.png" alt="menu" />
-              NOCHE</button>
-              <label  for="dd/mm/aaaa"><strong>DD/MM/AAAA</strong></label>
-          </div>
-          <div class="blockDataTrip__dataDeparture">
-            <input  type="date" id="dataDeparture"  min="dataDeparture" required>
-            
-            <figure>
-              <img src="media_480/images/calendario.png" alt="Calendar" />
-            </figure> 
-          </div>
-          <div class="blockDataTrip__return">
-            <label  for="userName"><strong>REGRESO</strong></label>
-              <button><img src="media_480/images/mañana.png" alt="menu" />
-              MAÑANA</button>
-              <button><img src="media_480/images/tarde.png" alt="menu" />
-              TARDE</button>
-              <button><img src="media_480/images/noche.png" alt="menu" />
-              NOCHE</button>
-              <label  for="dd/mm/aaaa"><strong>DD/MM/AAAA</strong></label>
-          </div>
-          <div class="blockDataTrip__dataReturn">
-            <input  type="date" id="dataReturn" value="DD/MM/A" min="dataDeparture" required>
-            <figure>
-              <img src="media_480/images/calendario.png" alt="Calendar" />
-            </figure> 
-          </div>
-        </div> 
-        <!-- blockDataTrip --> 
-        <!-- blockTravellers --> 
-        <div class="blockTravellers">
-          <label class="travellerAdult" for="travellerAdult"><span><strong>ADULTOS</strong></span></label>
-          <label class="travellerChild" for="travellerChild"><strong> &nbsp&nbsp&nbsp&nbsp&nbspNIÑOS 0-13&nbsp&nbsp&nbsp&nbsp&nbsp  </strong></label>
-          <label class="travellerBaby" for="travellerBaby"><strong>NIÑOS &lt4</strong><br><span>(SIN OCUPAR PLAZA)</span> </label>
-          <div class="blockTravellers__NumberAdult">
-            <figure>
-              <img class="travellerAdult--image" src="media_480/images/adult.png" alt="Calendar" />
-            </figure> 
-            <input  type="number" id="numberAdult" max="9" min="0" value="1" placeholder="1" required>
-          </div>
-          <div class="blockTravellers__NumberChild">
-            <figure>
-              <img class="travellerChild--image" src="media_480/images/adult.png" alt="Calendar" />
-            </figure> 
-            <input  type="number" id="numberChild" max="9" min="0" value="0" required>
-          </div>
-          <div class="blockTravellers__NumberBaby">
-            <figure>
-              <img class="travellerBaby--image" src="media_480/images/baby.png" alt="Calendar" />
-            </figure> 
-            <input  type="number" id="numberBaby" max="9" min="0" value="0" required>
-          </div>
-        </div>
-      <!-- blockTravellers -->
-      <!-- blockDiscount -->
-      <div class="blockDiscount">
-        <label  for="young"><strong>+ RENFE JOVEN 50</strong></label>
-        <input  type="number" id="young" max="1" min="0" value="0" required>
-        <label  for="goldCard"><strong>TARJETA DORADA</strong></label>
-        <input  type="number" id="goldCard" max="1" min="0" value="0" required> 
-      </div>
-      <!-- blockDiscount -->
-      <!-- blockPromotionalCode -->
-      <div class="blockPromotionalCode">
-        <label  for="code"><strong>CODIGO PROMOCIONAL</strong></label>
-        <input  type="text" id="code" required>
-      </div> 
-      <!-- blockButtonBuy -->
-      <div class="blockButtonBuy">
-        <button ><strong>COMPRAR</strong></button>
-      </div>
-      <!-- blockButtonBuy -->
-      </form> 
-    
-      <!-- blockAnimationImages -->
-      <div class="blockAnimation__container">
-          <div class="blockAnimationImages__container" id="blockAnimationImages__container">
-            <div class="blockAnimationImagesLinks__container">
-                <figure>
-                    <img class="imageSanitariAlert" src="media_480/images/alertaSanitaria_480.jpg" alt="" />
-                </figure> 
-                <div class="linePurple"></div>
-                <div class="blackBlock"></div>
-                <a  class="blockAnimationImages__botton_01" href="https://www.renfe.com/empresa/MedidasCV19.html?icid=HCovid19"><span><strong> AMPLIADO EL ESTADO DE ALARMA HASTA EL 10 DE MAYO</strong></span></a>
-                <a  class="blockAnimationImages__botton_02" href="https://www.renfe.com/empresa/MedidasCV19.html?icid=HCovid19"><span><strong>NUEVAS MEDIDAS PARA VIAJAR</strong></span></a> 
+    <main>
+        <!-- ºheader--------------------------------------------------- -->
+        <header>
+            <input type='checkbox' id='openOffCanvas'>
+            <!-- Hay que meter el label en un div para reducir el display del label a una caja..si no el label abarca todo el espacio horizontal -->
+            <div class='header__menuCanvasWindow'>
+                <label for='openOffCanvas'>
+                    <picture>
+                        <img src='images/menu.svg' alt='menu'>
+                    </picture>
+                </label>
             </div>
-            <div class="blockAnimationImagesLinks__container">
-                <figure>
-                    <img class="imageSanitariAlert" src="media_480/images/luzAlFinalTunel_480.jpg" alt="" />
-                </figure> 
-                <div class="linePurple"></div>
-                <div class="blackBlock"></div>
-                <a  class="blockAnimationImages__botton_01" href="https://hayluzalfinaldeltunel.com/"><span><strong>  <br></strong></span></a>
-                <a  class="blockAnimationImages__botton_02" href="https://hayluzalfinaldeltunel.com/"><span><strong>#ESTEVIRUSLOPARAMOSUNIDOS</strong></span></a> 
-            </div>
-            <div class="blockAnimationImagesLinks__container">
-                <figure>
-                    <img class="imageSanitariAlert" src="media_480/images/estamosConectados_480.jpg" alt="" />
-                </figure> 
-                <div class="linePurple"></div>
-                <div class="blackBlock"></div>
-                <a  class="blockAnimationImages__botton_01" href="https://www.renfe.com/viajeros/info/billeteidentificativo.html?icid=HBilletePersonalizado"><span><strong>  INFÓRMATE</strong></span></a>
-                <a  class="blockAnimationImages__botton_02" href="https://www.renfe.com/viajeros/info/billeteidentificativo.html?icid=HBilletePersonalizado"><span><strong>BILLETE PERSONALIZADO</strong></span></a> 
-            </div>
-            <div class="blockAnimationImagesLinks__container">
-                <figure>
-                    <img class="imageSanitariAlert" src="media_480/images/alertaSanitaria_480.jpg" alt="" />
-                </figure> 
-                <div class="linePurple"></div>
-                <div class="blackBlock"></div>
-                <a  class="blockAnimationImages__botton_01" href="https://www.renfe.com/empresa/MedidasCV19.html?icid=HCovid19"><span><strong> AMPLIADO EL ESTADO DE ALARMA HASTA EL 10 DE MAYO</strong></span></a>
-                <a  class="blockAnimationImages__botton_02" href="https://www.renfe.com/empresa/MedidasCV19.html?icid=HCovid19"><span><strong>NUEVAS MEDIDAS PARA VIAJAR</strong></span></a> 
-            </div>
-          </div> 
-          <button class="buttonNextImage" id="buttonNextImage" onclick="nextImage()"> &gt </button>
-      </div>
-      <!-- blockAnimationImages -->
-      <!-- blockHelpt -->
-      <div class="blockHelpt">
-        <figure>
-          <img src="media_480/images/chat_irene01_primavera.png" alt="Soy Irene" />
-        </figure>
-          <a class="blockHelpt__Hello" href="/"><span><strong> SOY IRENE </strong></span></a>
-          <a href="/"><span><strong> ¿NECESITAS AYUDA? </strong></span></a>
-              
-          <div class="blockHelpt__H1">
-            <figure>
-              <img src="media_480/images/suitcase.png" alt="Suitcase" />
-            </figure> 
-            <a href="https://venta.renfe.com/vol/home.do" ><span><strong>OTRAS OPERACIONES DE VIAJE</strong></span></a>
-          </div>
-          
-          <ul class="blockHelpt__Links">
-            <li>
-              <a target="_blank" href="https://venta.renfe.com/vol/accesoCambio.do?Idioma=es&Pais=ES&inirenfe=SI" >Cambios <img id="newwin" src="media_480/images/newwin.png"  ></a>
-            </li>
-            <li>
-              <a target="_blank" href="https://venta.renfe.com/vol/searchTickets.do?c=_uIjK" >Anulaciones <img id="newwin" src="media_480/images/newwin.png" ></a>
-            </li>					
-            <li>
-              <a target="_blank" href="https://venta.renfe.com/vol/catalogPassesCard.do?c=_VM8I" >Abonos/Bono AVE <img id="newwin" src="media_480/images/newwin.png" ></a>
-            </li>
-            <li>
-              <a target="_blank" href="https://venta.renfe.com/vol/myJourneysCEX.do?c=_VM8I" >Mis Viajes <img id="newwin" src="media_480/images/newwin.png" ></a>
-            </li>
-            <li>
-              <a target="_blank" href="https://venta.renfe.com/vol/operReservas.do" >Compra con localizador <img id="newwin" src="media_480/images/newwin.png" ></a>
-            </li>
-            <li>
-              <a href="https://www.renfe.com/viajeros/info/factura.html">Factura online</a>
-            </li>
-            <li>
-              <a target="_blank" href="https://venta.renfe.com/vol/infoPuntualidadTrenes.do" >Consulta tu tren <img id="newwin" src="media_480/images/newwin.png" ></a>
-            </li>
-          </ul>
-          <div class="blockHelpt__H1">
-            <figure>
-              <img src="media_480/images/credit-card.png" alt="Credit Card" />
-            </figure> 
-            <a href="" ><span><strong>OTRAS PRODUCTOS RENFE</strong></span></a>
-          </div>
-          <ul class="blockHelpt__Links">
-            <li>
-              <a target="_blank" href="https://venta.renfe.com/vol/ttlHome.do" >Compra trenes turísticos <img id="newwin" src="media_480/images/newwin.png" ></a>
-            </li>
-            <li>
-              <a href="https://www.renfe.com/viajeros/viajes_internacionales/index.html" >Viajes internacionales <img id="newwin" src="media_480/images/newwin.png" ></a>
-            </li>					
-            <li>
-              <a target="_blank" href="https://venta.renfe.com/vol/detailsPassesCard.do?c=_bGKo" >Renfe spain pass <img id="newwin" src="media_480/images/newwin.png" ></a>
-            </li>
-            <li>
-              <a href="https://www.renfe.com/trenesturisticos/index.html" >Trenes turísticos</a>
-            </li>
-          </ul>
-      </div>
-      <!-- blockHelpt -->
-      <!-- blockAppRenfe -->
-      <div class="blockAppRenfe">
-        <a href="https://www.renfe.com/viajeros/movilidad/index.html"><span><strong> DESCÁRGATE NUESTRA APP </strong></span></a>
-        <div class="blockAppRenfe__Links">
-          <div class="blockAppRenfe__link" >
-            <img class="blockAppRenfe__Links--img" src="media_480/images/ticket.png"> <a class="blockAppRenfe__Links--a" target="_blank" href="https://venta.renfe.com/vol/ttlHome.do" ><span><strong> Renfe Ticket </strong></span></a>
-          </div>
-          <div class="blockAppRenfe__link">
-            <img class="blockAppRenfe__Links--img" src="media_480/images/cercanias.png"> <a class="blockAppRenfe__Links--a" href="https://www.renfe.com/viajeros/viajes_internacionales/index.html" ><span><strong> Renfe Cercanías </strong></span></a>
-          </div>				
-          <div class="blockAppRenfe__link">
-            <img class="blockAppRenfe__Links--img" src="media_480/images/horarios.png"> <a class="blockAppRenfe__Links--a" target="_blank" href="https://venta.renfe.com/vol/detailsPassesCard.do?c=_bGKo" ><span><strong> Renfe Horarios </strong></span></a>
-          </div>
-        </div>  
-      </div>
-      <!-- blockAppRenfe -->
-      <!-- blockSocialNetworks -->
-      <div class="blockSocialNetworks">
-        <h1>SÍGENOS EN</h1>
-        <div class="blockSocialNetworks__icons">
-          <a href="https://www.facebook.com/Renfe" class="fa fa-facebook" alt="Facebook"></a>
-          <a href="https://twitter.com/renfe" class="fa fa-twitter" alt="Twiter"></a>
-          <a href="https://www.youtube.com/user/renfe" class="fa fa-youtube" alt="Youtube"></a>
-          <a href="https://www.flickr.com/photos/renfeoperadora/" class="fa fa-flickr" alt="Flickr"></a>
-          <a href="https://www.linkedin.com/company/renfe" class="fa fa-linkedin" alt="Linkedin"></a>
-          <a href="https://www.instagram.com/renfe/?hl=es" class="fa fa-instagram" alt="Instagram"></a>
-        </div>
-      </div>
-      <!-- blockSocialNetworks -->
-      <!-- blockCercaniasFeve -->
-      <div class="blockPubli">
-        <a href="https://www.renfe.com/viajeros/cercanias/index.html" class="content">
-        <img src="media_480/images/m-cercanias_v02.png" alt="">
-        <strong> <span class="blockPubli--title">Cercanías y Feve</span></strong> 
-        <strong> <span class="blockPubli--text">Líneas y horarios</span></strong> 
-        </a>
-      </div>
-      <!-- blockCercaniasFeve -->
-      <!-- blockCodiPuntos -->
-      <div class="blockPubli">
-        <a href="https://www.renfe.com/empresa/solicitudcodigopuntos.html" class="content">
-          <img src="media_480/images/pastilla_cambios.png" alt="">
-          <strong> <span class="blockPubli--title">Solicitud Código / Puntos</span></strong>
-          <strong> <span class="blockPubli--text">Solicitud on line</span></strong>
-        </a>
-      </div>
-      <!--  blockCodiPuntos -->
-      <div class="blockPubli">
-        <a href="https://www.renfe.com/viajeros/PlayRenfe/index.html" class="content">
-            <img src="media_480/images/pastilla_playrenfe_2.png" alt="">
-            <strong> <span class="blockPubli--title">Disfruta de PlayRenfe</span></strong>
-            <strong> <span class="blockPubli--text">Programación</span></strong>
-         </a>
-      </div>
-      <!--  blockCodiPuntos -->
-       <!--  blockHorarios -->
-      <div class="blockPubli">
-        <a href="https://www.renfe.com/viajeros/PlayRenfe/index.html" class="content">
-            <img src="media_480/images/m-horarios_v02.png" alt="">
-            <strong> <span class="blockPubli--title">Horarios y precios</span></strong>
-            <strong> <span class="blockPubli--text">AVE, LD, AVANT y MD</span></strong>
-         </a>
-      </div>
-      <!--  blockHorarios -->
-      <!--  blockTarjetaRenfe -->
-      <div class="blockPubli">
-        <a href="https://www.renfe.com/viajeros/tarjetas/index.html" class="content">
-            <img src="media_480/images/tarjetas_bis.png" alt="">
-            <strong> <span class="blockPubli--title">Tarjeta +Renfe</span></strong>
-            <strong> <span class="blockPubli--text">Viaja Gratis sólo por viajar</span></strong>
-         </a>
-      </div>
-      <!--  blockTarjetaRenfe -->
-      <!--  blockdescuentos -->
-      <div class="blockPubli">
-        <a href="https://www.renfe.com/viajeros/tarifas/index.html" class="content">
-            <img src="media_480/images/m-tarifasdescuentos.png" alt="">
-            <strong> <span class="blockPubli--title">Tarifas y descuentos</span></strong>
-            <strong> <span class="blockPubli--text">Ventajas de viajar en tren</span></strong>
-         </a>
-      </div>
-      <!--  blockdescuentos -->
-      <!--  blockRenfeViajes -->
-      <div class="blockPubli">
-        <a href="https://www.renfe.com/renfeviajes/index.html" class="content">
-            <img src="media_480/images/m-RenfeViajes01.png" alt="">
-            <strong> <span class="blockPubli--title">RENFE VIAJES</span></strong>
-            <strong> <span class="blockPubli--text">reserva tu hotel y ocio</span></strong>
-         </a>
-      </div>
-      <!--  blockRenfeViajes -->
-      <!--  blockInformation -->
-      <div class="blockPubli">
-        <a href="https://www.renfe.com/viajeros/info/index.html" class="content">
-            <img src="media_480/images/m-info_v02.png" alt="">
-            <strong> <span class="blockPubli--title">Información útil</span></strong>
-            <strong> <span class="blockPubli--text">Para tu viaje</span></strong>
-         </a>
-      </div>
-      <!--  blockInformation -->
-      <!--  blockInformationLinks -->
-      <div class="blockInformationLinks">
-        <h1>INFORMACION GENERAL</h1>
-        <ul class="list-inline">
-          <li>
-            <a href="https://www.renfe.com/viajeros/atendo/index.html" class="link2" title="Atendo">Atendo <img src="media_480/images/hico16_atendo.png" alt=""></a>
-          </li>
-          <li>
-            <a href="https://www.renfe.com/viajeros/tarifas/grupos.html" class="link2" title="Grupos">Grupos</a>
-          </li>
-          <li>
-            <a href="https://www.renfe.com/empresa/comunicacion/incidencias.html" class="link2" title="Avisos">Avisos</a> 
-          </li>
-          <li>
-            <a href="https://saladeprensa.renfe.com/" class="link2" title="Sala de prensa :: Se abre nueva ventana" target="_blank">Sala de Prensa</a>
-          </li>
-          <li>
-            <a href="https://www.renfe.com/empresa/atencion_cliente/index.html" class="link2" title="Atención al cliente">Atención al cliente</a>
-          </li>
-          <li>
-            <a href="https://agencias.renfe.com/vol/agencias.do" class="link2" title="Renfe Agencias :: Se abre nueva ventana" target="_blank" >Renfe Agencias</a>
-          </li>
-        </ul>
-      </div>
-      <div class="blockInformationLinks" id="blockInformationLinks">
-          <h1>EMPLEO Y FORMACIÓN</h1>
-          <ul>
-            <li>
-              <a  href="https://www.renfe.com/empresa/empleo_y_formacion/formacion/index.html" title="FORMACIÓN">FORMACIÓN </a>
-            </li>
-            <li>
-              <a href="https://www.renfe.com/empresa/empleo_y_formacion/Empleo2020/index.html" title="Oferta de Empleo 2020">OFERTA DE EMPLEO</a>
-            </li>         
-          </ul>  
-      </div>
-      <!--  blockInformationLinks -->
-      <!--  footer -->
-      <div class="footer">
-        <figure>
-          <img src="media_480/images/f-renfe2.png" alt="logo renfe"> 
-        </figure>
-        <ul class="list-inline">
-          <li class="border-r"><a href="https://www.renfe.com/empresa/informacion_legal/index.html">Información legal</a></li>
-          <li class="border-r"><a href="https://www.renfe.com/empresa/informacion_legal/privacidad.html">Política Privacidad de Datos</a></li>        
-          <li class="border-r"><a href="https://www.renfe.com/empresa/informacion_legal/politica_cookies.html">Política de cookies</a></li>
-          <li class="border-r"><a href="https://www.renfe.com/empresa/informacion_legal/accesibilidad_web.html">Accesibilidad</a></li>
-          <li><a href="https://www.renfe.com/mapa.html">Mapa web</a></li>
-          <p>@Renfe. Todos los derechos reservados.</p>               
-        </ul>
-      </div>
-      <!--  footer -->
-    </div><!-- main -->
-    <script>
-      
-      $( document ).ready(function() {
-        var now = new Date();
-        var day = ("0" + now.getDate()).slice(-2);
-        var month = ("0" + (now.getMonth() + 1)).slice(-2);
-        var today = now.getFullYear()+"-"+(month)+"-"+(day) ;
-        $("#dataDeparture").val(today);
-    });
-    
-      function nextImage() {
-        var elementClass = document.getElementById("blockAnimationImages__container");
-        var positionClass = elementClass.getBoundingClientRect();
-        var left=positionClass.left;
-        console.log(left + "left")
-        if(left == 0 || left > -480)
-        {
-          document.getElementById("blockAnimationImages__container").style.transform = "translateX(-480px)"; 
-          console.log(left + "left into")
-        }
-        else if (left == -480 || left > -960)
-        {
-          document.getElementById("blockAnimationImages__container").style.transform = "translateX(-960px)"; 
-          console.log(left + "left into")
-        }
-        else if (left == -960 || left > -1440)
-        {
-          document.getElementById("blockAnimationImages__container").style.transform = "translateX(0px)"; 
-          console.log(left + "left into")
-        }  
-        
-        console.log(
-        positionClass.top + " topClass \n", 
-        positionClass.right + " rightClass \n", 
-        positionClass.bottom  + " bottomClass \n", 
-        positionClass.left  + " leftClass \n");
-      } 
-    
-    /* function thereIsLigth(){
-      document.getElementById("imageSanitariAlert").innerHTML = "Hello World";
-    }
-    function weAreConnect(){
-      document.getElementById("imageSanitariAlert").innerHTML = "Hello World";
-    } */
-    /* setInterval(saludar, 5000);
-
-    function animationMoveImages(){window.alert(«saludos»);} */
-    </script>
+            <nav class='header__menuNav'>
+                <ul>
+                    <li><strong><a href='https://www.renfe.com/empresa/index.html'>Grupo Renfe</a></strong></li>
+                    <li><a href='https://www.renfe.com/empresa/alquilerdematerial/index.html'>Alquiler</a></li>														
+                    <li><a href='https://www.renfe.com/empresa/integria/index.html'>Fabricación y Mantenimiento</a></li>
+                    <li><a href='https://www.renfe.com/empresa/mercancias/index.html'>Mercancías</a></li>									
+                    <li><a href='https://www.renfe.com/viajeros/index.html'>Viajeros</a></li>
+                </ul>
+            </nav>
+            <picture>
+                <img class='header--logoGob' src='images/logo_gob.jpg' alt='Logo gobierno de España'>
+            </picture>
+            <picture class='header__logoRenfeContainer'>
+                <img class='header--logoRenfe' src='images/logo.png' alt='Logo renfe'>
+            </picture>
+            <input type='checkbox' id='openOffCanvasWorld'>
+            <div class='header__worldCanvasWindow'>
+                <label for='openOffCanvasWorld'>
+                    <picture>
+                        <img src='images/world.svg' alt='menu'>
+                    </picture>
+                </label>
+            </div>             
+           <nav class='header__worldNav'>
+               <ul>
+                   <li><a href='https://www.renfe.com/'>Bienvenido </a></li>
+                   <li><a href='https://www.renfe.com/CA/viajeros/index.html'>* Benvingut (C)</a></li>
+                   <li><a href='https://www.renfe.com/EU/viajeros/index.html'>* Ongi etorri</a></li>
+                   <li><a href='https://www.renfe.com/GA/viajeros/index.html'>* Benvido</a></li>
+                   <li><a href='https://www.renfe.com/VA/viajeros/index.html'>* Benvingut (V)</a></li>
+                </ul>
+           </nav>
+           <!-- Creo otro nav identico al nav header__menuNav, me esta dando problemas el original al situarlo-->
+           <!-- <nav class='header__menuNav_02'>
+               <ul>
+                   <li><strong><a href='https://www.renfe.com/empresa/index.html'>Grupo Renfe</a></strong></li>
+                   <li><a href='https://www.renfe.com/empresa/alquilerdematerial/index.html'>Alquiler</a></li>														
+                   <li><a href='https://www.renfe.com/empresa/integria/index.html'>Fabricación y Mantenimiento</a></li>
+                   <li><a href='https://www.renfe.com/empresa/mercancias/index.html'>Mercancías</a></li>									
+                   <li><a href='https://www.renfe.com/viajeros/index.html'>Viajeros</a></li>
+                </ul>
+            </nav> -->
+           <picture class='header__ImageUserContainer'>
+               <img class='header__ImageUser' src='images/user.svg' alt='menu'>
+           </picture> 
+           <h2><a href='https://venta.renfe.com/vol/loginCEX.do'>Bienvenido </a></h2>
+           <h1><a href='https://venta.renfe.com/vol/loginCEX.do'>Clientes renfe. identificate.</a></h1> 
+           <div class='header__screem'>
+                <picture>
+                    <img src='images/header.svg' alt='menu'>
+                </picture>
+           </div>
+        </header>
+        <!-- ºheader--------------------------------------------------- -->
+        <div class='block'>
+       </div>
+   </main>
 </body>
 </html>
